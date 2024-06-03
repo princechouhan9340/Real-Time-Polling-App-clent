@@ -32,7 +32,7 @@ const Chat = () => {
     fetchData();
 
     socket.on('chat message', (msg) => {
-      setMessages((prevMessages) => [...prevMessages, msg]);
+      setMessages((prevMessages) => [msg,...prevMessages]);
     });
 
     socket.on('poll created', (poll) => {
@@ -166,7 +166,7 @@ const Chat = () => {
             <strong>{msg.username}:</strong> {msg.message}
           </div>
         ))}
-        {/* <div ref={messagesEndRef} /> */}
+        <div ref={messagesEndRef} />
         {typingUsers.length > 0 && (
           <div className="typing-indicator">
             {typingUsers.join(', ')} {typingUsers.length > 1 ? 'are' : 'is'} typing...

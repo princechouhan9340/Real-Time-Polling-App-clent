@@ -59,9 +59,10 @@
     padding: 10px;
     border-radius: 5px;
     margin: 5px 0;
-    /* max-width: 80%; */
-    /* background-color: #f1f1f1; */
+    max-width: 80%;
+    background-color: #f1f1f1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
   }
   
   .my-message {
